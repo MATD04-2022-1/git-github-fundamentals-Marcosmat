@@ -49,21 +49,22 @@ EX.:
  
 FORMULA MATEMÁTICA FORMAL PARA CALCULO DE PASSADAS: LOG(N/M)/LOG(K), ONDE:
 
--N = *NUMERO DE REGISTROS DO ARQUIVO*;
+**N** = *NUMERO DE REGISTROS DO ARQUIVO*;
 
--M = *TAMANHO DA MEMORIA*;
+**M** = *TAMANHO DA MEMORIA*;
 
--K = *NUMERO DE ARQUIVOS AUXILIARES (AQUI COMO SENDO 2)*. 
+**K** = *NUMERO DE ARQUIVOS AUXILIARES (AQUI COMO SENDO 2)*. 
+
 
 **TESTES DE CASO:**
 
-**NUMERO DE REGISTROS**     |  2 000 | 2 000 | 2 000 | 50 000 | 100 000
+**NUMERO DE REGISTROS**|  2 000 | 2 000 | 2 000 | 50 000 | 100 000
 ---------------------------- -------- ------- ------- -------- --------
-**TAMANHO DA MEMORIA**	    |  100   |  500  |  800  | 3 000  | 18 000
+**TAMANHO DA MEMORIA**|  100   |  500  |  800  | 3 000  | 18 000
 ---------------------------- -------- ------- ------- -------- --------
-**ARQUIVOS AUXILIARES**     |   2    |   2   |   2   |   2    |   2
+**ARQUIVOS AUXILIARES**|   2    |   2   |   2   |   2    |   2
 ---------------------------- -------- ------- ------- -------- --------
-**PASSADAS (CALC. FORM.)**  |  5,3   |   2   |  1,3  |  4,05  |  2,47
+**PASSADAS (CALC. FORM.)**|  5,3   |   2   |  1,3  |  4,05  |  2,47
 ---------------------------- -------- ------- ------- -------- --------
 **PASSADAS (COM contapass)**|   5    |  3    |  2    |   5    |   3
 

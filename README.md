@@ -1,47 +1,46 @@
-## DESCRIÇÃO:
+## Descrição:
 
-**1-** SÃO GERADOS N NUMEROS ALEATORIOS, OS QUAIS SÃO ARMAZENADOS EM OLD_FILE.TXT
+**1-** São gerados n numeros aleatorios, os quais são armazenados em old_file.txt
 
-**2-** SÃO LIDOS M REGISTROS DE OLD_FILE, DE TAMANHO DA MEMORIA INTERNA (RAM[QTD]), ORDENADOS PELO METODO
-   "MERGESORT" E COLOCADOS EM UM DOS BLOCOS AUXILIARES (FITA1 OU FITA2, INICIALMENTE, "INTERCALAC_1" E 2),
-   ENQUANTO OLD CONTENHA ELEMENTOS A SEREM LIDOS.
+**2-** São lidos m registros de old_file, de tamanho da memoria interna (ram[qtd]), ordenados pelo metodo
+   "mergesort" e colocados em um dos blocos auxiliares (fita1 ou fita2, inicialmente, "intercalac_1" e 2),
+   enquanto old contenha elementos a serem lidos.
 
-**3-** ENTÃO, TEM-SE DOIS ARQUIVOS, FITA1 E FITA2, CONTENDO BLOCOS ORDENADOS DE MANEIRA INTERCALADA.
+**3-** Então, tem-se dois arquivos, fita1 e fita2, contendo blocos ordenados de maneira intercalada.
 
-**4-** SÃO CRIADOS MAIS DOIS ARQUIVOS AUXILIARES (ARQAUX1 E ARQAUX2), QUE RECEBERÃO, DE MANEIRA INTERCALADA,
-   COM "CORTE" INICIAL (FATIA) DE TAMANHO DA MEMORIA, A JUNÇÃO DOS BLOCOS DE FITA1 E 2.
+**4-** São criados mais dois arquivos auxiliares (arqaux1 e arqaux2), que receberão, de maneira intercalada,
+   com "corte" inicial (fatia) de tamanho da memoria, a junção dos blocos de fita1 e 2.
 
-**5-** ENQUANTO FITA1 E FITA2 NÃO CHEGAM AO FIM, ARQAUX1 E ARQAUX2 RECEBEM O MERGE DOS BLOCOS.
+**5-** Enquanto fita1 e fita2 não chegam ao fim, arqaux1 e arqaux2 recebem o merge dos blocos.
 
-**6-** QUANDO NÃO RESTAM MAIS BLOCOS A SEREM INTERCALADOS DE FITA1 E 2, NA PROXIMA ITERAÇÃO FATIA
-   DOBRA DE VALOR, POIS PROXIMO BLOCO TERÁ O DOBRO DE TAMANHO. FITA1 E 2 SÃO REMOVIDOS,
-   JÁ QUE TODOS DADOS ESTÃO PRESENTES EM ARQAUX1 E 2.
+**6-** Quando não restam mais blocos a serem intercalados de fita1 e 2, na proxima iteração fatia
+   dobra de valor, pois proximo bloco terá o dobro de tamanho. Fita1 e 2 são removidos,
+   já que todos dados estão presentes em arqaux1 e 2.
  
-**7-** DE MANEIRA A PRESERVAR A INTERCALAÇÃO INICIAL PARA FINS DE VISUALIZAÇÃO, OS ARQUIVOS INTERCALAC_1 E 2 SÃO MANTIDOS.
-   A REPETIÇÃO DESSA FASE OCORRE "MERGES¹" VEZES, VARIAVEL QUE CONTEM A QUANTIDADE DE JUNÇÕES
-   QUE DEVEM OCORRER.
+**7-** De maneira a preservar a intercalação inicial para fins de visualização, os arquivos intercalac_1 e 2 são mantidos.
+   a repetição dessa fase ocorre "merges¹" vezes, variavel que contem a quantidade de junções
+   que devem ocorrer.
 
 
-**¹MERGES** = 	CONTARQ/TAM, CASO NÃO SOBREM RESTOS;
-	  	CONTARQ/TAM + 1, CASO SOBREM.
-          
-          	CONTARQ = NUMERO TOTAL DE REGISTROS;
-	  	AM = TAMANHO DA MEMORIA INTERNA.
+**¹merges** = 	contarq/tam, caso não sobrem restos;
+	  	contarq/tam + 1, caso sobrem;
+          	contarq = numero total de registros;
+	  	am = tamanho da memoria interna.
 
-UM DOS CRITERIOS A SE AVALIAR SOBRE O CUSTO DA SOLUÇÃO ENVOLVIDA É O NUMERO DE PASSADAS. UMA PASSADA CARACTERIZA-SE
-PELO NUMERO DE VEZES EM QUE UM ARQUIVO É LIDO POR COMPLETO.
-A VARIÁVEL "fatia", POR ACOMPANHAR CADA PROCESSO DE "PASSADA" DO ARQUIVO, DOBRANDO A CADA ITERAÇÃO, APROXIMA-SE
-DO VALOR ESTIPULADO PELA FORMULA. VAMOS APROVEITÁ-LA EM NOSSAS CONSTATAÇOES:
-NO INICIO DE CADA PRIMEIRO LOOP WHILE, NA "FASE MERGE" DO PROCESSO, HÁ UM CONTADOR (contapass) QUE INCREMENTA-SE
-ENQUANTO O VALOR DA FATIA É MENOR QUE A QUANTIDADE DE REGISTROS.
+Um dos criterios a se avaliar sobre o custo da solução envolvida é o numero de passadas. Uma passada caracteriza-se
+Pelo numero de vezes em que um arquivo é lido por completo.
+A variável "fatia", por acompanhar cada processo de "passada" do arquivo, dobrando a cada iteração, aproxima-se
+Do valor estipulado pela formula. Vamos aproveitá-la em nossas constataçoes:
+No inicio de cada primeiro loop while, na "fase merge" do processo, há um contador (contapass) que incrementa-se
+Enquanto o valor da fatia é menor que a quantidade de registros.
 
-EX.:
-	REGISTROS: 2 000
-	MEMORIA  : 100
-	FATIA    : 100
+Ex.:
+	registros: 2 000
+	memoria  : 100
+	fatia    : 100
 	
 	
-1ª ITERAÇÃO:		FATIA = 100
+1ª iteração:		fatia = 100
 
 2ª	"	:	"    = 200
 
@@ -49,42 +48,42 @@ EX.:
 
 4ª	"	:	"    = 800
 
-5ª	"	:	"    = 1 600  -> 5º VALOR ESCOLHIDO
+5ª	"	:	"    = 1 600  -> 5º valor escolhido
 
 6ª	"	:	"    = 3 200
 
  
-FORMULA MATEMÁTICA FORMAL PARA CALCULO DE PASSADAS: LOG(N/M)/LOG(K), ONDE:
+Formula matemática formal para calculo de passadas: log(n/m)/log(k), onde:
 
-**N** = *NUMERO DE REGISTROS DO ARQUIVO*;
+**n** = *numero de registros do arquivo*;
 
-**M** = *TAMANHO DA MEMORIA*;
+**m** = *tamanho da memoria*;
 
-**K** = *NUMERO DE ARQUIVOS AUXILIARES (AQUI COMO SENDO 2)*. 
-
-
-
-**TESTES DE CASO:**
+**k** = *numero de arquivos auxiliares (aqui como sendo 2)*. 
 
 
-NUMERO DE REGISTROS: 2 000                                 |-2 000-|-2 000-|-50 000-|--100 000
 
---------------------------------------------------------------------------------
+**testes de caso:**
 
-TAMANHO DA MEMORIA: 100---|--500--|--800--|-3 000--|--18 000
+
+Numero de registros: 2 000                                 |-2 000-|-2 000-|-50 000-|--100 000
 
 --------------------------------------------------------------------------------
 
-ARQUIVOS AUXILIARES :  2|---2---|---2---|---2----|--2-------   
-
---------------------------------------------------------------------------------
-PASSADAS (CALC. FORM.): |5,3|2---|--1,3--|--4,05--|--2,47----  
+Tamanho da memoria: 100---|--500--|--800--|-3 000--|--18 000
 
 --------------------------------------------------------------------------------
 
-PASSADAS (COM contapass) -------|---5----|--3----|--2----|---5----|--3-------
+Arquivos auxiliares :  2|---2---|---2---|---2----|--2-------   
+
+--------------------------------------------------------------------------------
+Passadas (calc. Form.): |5,3|2---|--1,3--|--4,05--|--2,47----  
+
+--------------------------------------------------------------------------------
+
+Passadas (com contapass) -------|---5----|--3----|--2----|---5----|--3-------
 
 
-NOTA-SE QUE, CONSIDERANDO A UTILIZAÇÃO DE 2 ARQUIVOS AUXILIARES,
-QUANTO MAIOR A DIFERENÇA ENTRE MEMORIA E REGISTROS, MAIOR SERÁ
-O NÚMERO DE PASSADAS.  
+Nota-se que, considerando a utilização de 2 arquivos auxiliares,
+Quanto maior a diferença entre memoria e registros, maior será
+O número de passadas.  

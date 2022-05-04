@@ -1,4 +1,4 @@
-**DESCRIÇÃO**:
+## DESCRIÇÃO:
 
 **1-** SÃO GERADOS N NUMEROS ALEATORIOS, OS QUAIS SÃO ARMAZENADOS EM OLD_FILE.TXT
 
@@ -25,8 +25,8 @@
 **¹MERGES** = 	CONTARQ/TAM, CASO NÃO SOBREM RESTOS;
 	  	CONTARQ/TAM + 1, CASO SOBREM.
           
-          	**CONTARQ** = NUMERO TOTAL DE REGISTROS;
-	  	**TAM** = TAMANHO DA MEMORIA INTERNA.
+          	CONTARQ = NUMERO TOTAL DE REGISTROS;
+	  	AM = TAMANHO DA MEMORIA INTERNA.
 
 UM DOS CRITERIOS A SE AVALIAR SOBRE O CUSTO DA SOLUÇÃO ENVOLVIDA É O NUMERO DE PASSADAS. UMA PASSADA CARACTERIZA-SE
 PELO NUMERO DE VEZES EM QUE UM ARQUIVO É LIDO POR COMPLETO.
@@ -37,18 +37,16 @@ ENQUANTO O VALOR DA FATIA É MENOR QUE A QUANTIDADE DE REGISTROS.
 
 EX.:
 	REGISTROS: 2 000
-	
 	MEMORIA  : 100
-	
 	FATIA    : 100
 	
 	
-	1ª ITERAÇÃO: FATIA = 100
-	2ª   "     :  "    = 200
-	3ª   "     :  "    = 400
-	4ª   "     :  "    = 800
-	5ª   "     :  "    = 1 600  -> 5º VALOR ESCOLHIDO
-	6ª   "     :  "    = 3 200
+1ª ITERAÇÃO: FATIA = 100
+2ª   "     :  "    = 200
+3ª   "     :  "    = 400
+4ª   "     :  "    = 800
+5ª   "     :  "    = 1 600  -> 5º VALOR ESCOLHIDO
+6ª   "     :  "    = 3 200
  
 FORMULA MATEMÁTICA FORMAL PARA CALCULO DE PASSADAS: LOG(N/M)/LOG(K), ONDE:
 
@@ -59,17 +57,25 @@ FORMULA MATEMÁTICA FORMAL PARA CALCULO DE PASSADAS: LOG(N/M)/LOG(K), ONDE:
 **K** = *NUMERO DE ARQUIVOS AUXILIARES (AQUI COMO SENDO 2)*. 
 
 
-#**TESTES DE CASO:**
+**TESTES DE CASO:**
 
-**NUMERO DE REGISTROS** ------------|--2 000-|-2 000-|-2 000-|-50 000-|--100 000
+NUMERO DE REGISTROS: 2 000  |-2 000-|-2 000-|-50 000-|--100 000
+
 --------------------------------------------------------------------------------
-**TAMANHO DA MEMORIA**  -----------|--100---|--500--|--800--|-3 000--|--18 000
+
+TAMANHO DA MEMORIA: 100---|--500--|--800--|-3 000--|--18 000
+
 --------------------------------------------------------------------------------
-**ARQUIVOS AUXILIARES** -------------|---2----|---2---|---2---|---2----|--2-------   
+
+ARQUIVOS AUXILIARES :  2|---2---|---2---|---2----|--2-------   
+
 --------------------------------------------------------------------------------
-**PASSADAS (CALC. FORM.)** ----------|--5,3---|---2---|--1,3--|--4,05--|--2,47----  
+PASSADAS (CALC. FORM.): |5,3|2---|--1,3--|--4,05--|--2,47----  
+
 --------------------------------------------------------------------------------
-**PASSADAS (COM contapass)** -------|---5----|--3----|--2----|---5----|--3-------
+
+PASSADAS (COM contapass) -------|---5----|--3----|--2----|---5----|--3-------
+
 
 NOTA-SE QUE, CONSIDERANDO A UTILIZAÇÃO DE 2 ARQUIVOS AUXILIARES,
 QUANTO MAIOR A DIFERENÇA ENTRE MEMORIA E REGISTROS, MAIOR SERÁ

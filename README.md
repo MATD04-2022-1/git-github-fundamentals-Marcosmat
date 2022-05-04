@@ -40,17 +40,17 @@ Ex.:
 	fatia    : 100
 	
 	
-1ª iteração:		fatia = 100
+1ª iteração: - fatia = 100
 
-2ª	"	:	"    = 200
+2ª - - - - - - - - - = 200
 
-3ª	"	:	"    = 400
+3ª - - - - - - - - - = 400
 
-4ª	"	:	"    = 800
+4ª - - - - - - - - - = 800
 
-5ª	"	:	"    = 1 600  -> 5º valor escolhido
+5ª - - - - - - - - - = 1 600  -> 5º valor escolhido
 
-6ª	"	:	"    = 3 200
+6ª - - - - - - - - - = 3 200
 
  
 Formula matemática formal para calculo de passadas: log(n/m)/log(k), onde:
@@ -63,7 +63,9 @@ Formula matemática formal para calculo de passadas: log(n/m)/log(k), onde:
 
 
 
+
 **testes de caso:**
+
 
 
 Numero de registros: 2 000                                 |-2 000-|-2 000-|-50 000-|--100 000

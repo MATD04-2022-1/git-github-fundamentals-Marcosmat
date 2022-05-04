@@ -53,7 +53,7 @@ Ex.:
 6ª - - - - - - - - - = 3 200
 
  
-Formula matemática formal para calculo de passadas: ##log(n/m)/log(k)##, onde:
+Formula matemática formal para calculo de passadas:  l o g ( n / m ) / l o g ( k ), onde:
 
 **n** = *numero de registros do arquivo*;
 
@@ -68,7 +68,7 @@ Formula matemática formal para calculo de passadas: ##log(n/m)/log(k)##, onde:
 
 
 
-Numero de registros: 2 000                                 |-2 000-|-2 000-|-50 000-|--100 000
+Numero de registros: 2 000|-2 000-|-2 000-|-50 000-|--100 000
 
 --------------------------------------------------------------------------------
 

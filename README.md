@@ -63,9 +63,11 @@ FORMULA MATEMÁTICA FORMAL PARA CALCULO DE PASSADAS: LOG(N/M)/LOG(K), ONDE:
 **K** = *NUMERO DE ARQUIVOS AUXILIARES (AQUI COMO SENDO 2)*. 
 
 
+
 **TESTES DE CASO:**
 
-NUMERO DE REGISTROS: 2 000  |-2 000-|-2 000-|-50 000-|--100 000
+
+NUMERO DE REGISTROS: 2 000                                 |-2 000-|-2 000-|-50 000-|--100 000
 
 --------------------------------------------------------------------------------
 

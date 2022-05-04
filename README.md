@@ -41,17 +41,17 @@ EX.:
 	FATIA    : 100
 	
 	
-1ª ITERAÇÃO: FATIA = 100
+1ª ITERAÇÃO:		FATIA = 100
 
-\ 2ª   "     :  "    = 200
+2ª	"	:	"    = 200
 
-\ 3ª   "     :  "    = 400
+3ª	"	:	"    = 400
 
-\ 4ª   "     :  "    = 800
+4ª	"	:	"    = 800
 
-\ 5ª   "     :  "    = 1 600  -> 5º VALOR ESCOLHIDO
+5ª	"	:	"    = 1 600  -> 5º VALOR ESCOLHIDO
 
-\ 6ª   "     :  "    = 3 200
+6ª	"	:	"    = 3 200
 
  
 FORMULA MATEMÁTICA FORMAL PARA CALCULO DE PASSADAS: LOG(N/M)/LOG(K), ONDE:

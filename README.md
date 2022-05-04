@@ -40,7 +40,7 @@ Ex.:
 	fatia    : 100
 	
 	
-1ª iteração: - fatia = 100
+1ª iteração: fatia = 100
 
 2ª - - - - - - - - - = 200
 
@@ -53,7 +53,7 @@ Ex.:
 6ª - - - - - - - - - = 3 200
 
  
-Formula matemática formal para calculo de passadas: log(n/m)/log(k), onde:
+Formula matemática formal para calculo de passadas: ##log(n/m)/log(k)##, onde:
 
 **n** = *numero de registros do arquivo*;
 

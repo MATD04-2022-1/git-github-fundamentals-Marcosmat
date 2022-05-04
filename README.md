@@ -83,7 +83,7 @@ Passadas (calc. Form.): - - - 5,3 - - | - - 2 - - - | - - 1,3 - - - | - - 4,05 -
 
 --------------------------------------------------------------------------------
 
-Passadas (com contapass): - 5 - - | - - 3 - - - - | - - 2 - - - - | -  - - 5 - - - - | - - 3 - - -
+Passadas (com contapass): - 5 - - | - - 3 - - - | - - 2 - - - - | -  - - 5 - - - - | - - 3 - - -
 
 
 Nota-se que, considerando a utilização de 2 arquivos auxiliares,

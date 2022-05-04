@@ -76,16 +76,18 @@ Tamanho da memoria: - - 100 - - |- - 500 - -| - - 800 - -| - 3 000 - - | - - 18 
 
 --------------------------------------------------------------------------------
 
-Arquivos auxiliares: - - - - - -2 - - | - - 2 - - - | - - - 2 - - - | - - 2 - - - - | - - 2 - -    
+Arquivos auxiliares: - - - - - -2 - - | - - 2 - - - | - - - 2 - - - | - - 2 - - - - | - - 2    
 
 --------------------------------------------------------------------------------
-Passadas (calc. Form.): - - - 5,3 - - | - - 2 - - - | - - 1,3 - - - | - - 4,05 - - | - - 2,47 - - - -  
+Passadas (calc. Form.): - - - 5,3 - - | - - 2 - - - | - - 1,3 - - - | - - 4,05 - - | - - 2,47  
 
 --------------------------------------------------------------------------------
 
-Passadas (com contapass): - 5 - - | - - 3 - - - | - - 2 - - - - | -  - - 5 - - - - | - - 3 - - -
+Passadas (com contapass): - 5 - - | - - 3 - - - | - - 2 - - - - | -  - - 5 - - - - | - - 3 
 
 
 Nota-se que, considerando a utilização de 2 arquivos auxiliares,
-Quanto maior a diferença entre memoria e registros, maior será
-O número de passadas.  
+
+quanto maior a diferença entre memoria e registros, maior será
+
+q número de passadas.  

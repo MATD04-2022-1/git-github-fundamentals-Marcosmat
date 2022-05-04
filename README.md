@@ -68,7 +68,7 @@ Formula matemática formal para calculo de passadas:  l o g ( n / m ) / l o g ( 
 
 
 
-Numero de registros: - - 2 000 - | - 2 000 - | - 2 000 - - -| - 50 000 - | - - 100 000
+Numero de registros: - - 2 000 - | - 2 000 - | - 2 000 - | - 50 000 - | - 100 000
 
 --------------------------------------------------------------------------------
 
